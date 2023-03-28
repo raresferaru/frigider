@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: aqua; */
+}
+
+body{
+    background-color: purple;
+    color: white;
+    overflow: scroll;
+}
+
+form{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-field{
+    margin: 10px 20px;
+}
+
+input[type="number"]{
+    width: 50px;
+}
+
+.img{
+    position: fixed;
+    position: -webkit-sticky;
+    top: 10px;
+    right: 10px;
+    background-image: url('https://media.istockphoto.com/id/834598830/photo/inside-of-clean-and-empty-refrigerator-with-shelves-good-background-for-health-or-diet-concept.jpg?s=612x612&w=0&k=20&c=nI65_7JGNVUV5hd_GPZS_d1QRWPUrJW_99rkmyrneeU=');
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    
+}
+
+
+.prev{
+    background-color: aqua;
+    position: absolute;
+    z-index: 10;
+    /* height: 75px;
+    width: 75px; */
+}
+
+.prev:nth-of-type(1){
+    top: 40px;
+    left: 75px;
+}
+
+.prev:nth-of-type(2){
+    top: 40px;
+    left: 175px;
+}
+
+.prev:nth-of-type(3){
+    top: 40px;
+    left: 275px;
+}
+
+.prev:nth-of-type(4){
+    top: 150px;
+    left: 75px;
+}
+
+.prev:nth-of-type(5){
+    top: 150px;
+    left: 175px;
+}
+
+.prev:nth-of-type(6){
+    top: 150px;
+    left: 275px;
+}
+
+.btn{
+    background-color: white;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+.cm{
+    margin-bottom: 50px;
+}
+
+.titlu{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.poza img{
+    width: 100%;
+    height: auto;
+}
+
+.poza{
+    height: auto;
+    width: auto;   
+    margin-bottom: 50px; 
+}
+
+.link{
+    width: auto;
+    margin: 10px auto;
+    text-align: center;
+}
+
+a.download{
+
+    text-decoration: none;
+    color: purple;
+
+    border: 1px solid white;
+    background-color: white;
+
+    border-radius: 5px;
+    padding: 10px 15px;
+
+    
+}
