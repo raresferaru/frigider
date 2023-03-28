@@ -54,37 +54,43 @@ app.get('/home', (req, res) => {
 
 app.post('/', async (req, res) => {
 
-    for (let i = 1; i <= 6; i++) {
-        let filePath = __dirname + '/upload/' + `photo${i}.png`;
-        try { fs.unlinkSync(filePath); } catch { }
-        filePath = __dirname + '/nobg_upload/' + `photo${i}.png`;
-        try { fs.unlinkSync(filePath); } catch { };
+    try {
+        for (let i = 1; i <= 6; i++) {
+            let filePath = __dirname + '/upload/' + `photo${i}.png`;
+            try { fs.unlinkSync(filePath); } catch { }
+            filePath = __dirname + '/nobg_upload/' + `photo${i}.png`;
+            try { fs.unlinkSync(filePath); } catch { };
+        }
+
+        const { p1, p2, p3, p4, p5, p6 } = req.files;
+        let photos = [];
+
+        photos.push(p1);
+        photos.push(p2);
+        photos.push(p3);
+        photos.push(p4);
+        photos.push(p5);
+        photos.push(p6);
+
+        let cnt = 0;
+        for (let p of photos) {
+            cnt += 1;
+            p.name = `photo${cnt}.png`;
+            await p.mv(__dirname + '/upload/' + p.name)
+
+        }
+
+        const { size, top, left } = req.body;
+        console.log(size);
+
+        imageOverlay(photos, size, top, left);
+        // res.redirect('/home')
+        res.render('send')
+    } catch (e) {
+
+        res.render('eroare')
+
     }
-
-    const { p1, p2, p3, p4, p5, p6 } = req.files;
-    let photos = [];
-
-    photos.push(p1);
-    photos.push(p2);
-    photos.push(p3);
-    photos.push(p4);
-    photos.push(p5);
-    photos.push(p6);
-
-    let cnt = 0;
-    for (let p of photos) {
-        cnt += 1;
-        p.name = `photo${cnt}.png`;
-        await p.mv(__dirname + '/upload/' + p.name)
-
-    }
-
-    const { size, top, left } = req.body;
-    console.log(size);
-
-    imageOverlay(photos, size, top, left);
-    // res.redirect('/home')
-    res.render('send')
 })
 
 app.get('/cacat', (req, res) => {
