@@ -81,7 +81,7 @@ app.post('/', async (req, res) => {
         }
 
         const { size, top, left } = req.body;
-        console.log(size);
+
 
         imageOverlay(photos, size, top, left);
         // res.redirect('/home')
