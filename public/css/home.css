@@ -27,7 +27,7 @@ input[type="number"]{
 
 .img{
     position: fixed;
-    position: -webkit-sticky;
+    position: -webkit-fixed;
     top: 10px;
     right: 10px;
     background-image: url('https://media.istockphoto.com/id/834598830/photo/inside-of-clean-and-empty-refrigerator-with-shelves-good-background-for-health-or-diet-concept.jpg?s=612x612&w=0&k=20&c=nI65_7JGNVUV5hd_GPZS_d1QRWPUrJW_99rkmyrneeU=');
