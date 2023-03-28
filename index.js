@@ -91,5 +91,9 @@ app.get('/cacat', (req, res) => {
     res.render('send')
 })
 
+app.get('*', (req, res) => {
+    res.redirect('/home')
+})
+
 const httpServer = http.createServer(app);
 httpServer.listen(80);
