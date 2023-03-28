@@ -12,6 +12,8 @@ const FormData = require('form-data');
 const Jimp = require('jimp');
 const sharp = require('sharp')
 const multiparty = require('multiparty');
+const http = require('http');
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -89,7 +91,5 @@ app.get('/cacat', (req, res) => {
     res.render('send')
 })
 
-app.listen(22, () => {
-    console.log("ready, master");
-})
-
+const httpServer = http.createServer(app);
+httpServer.listen(80);
