@@ -85,9 +85,7 @@ app.post('/', async (req, res) => {
 
         imageOverlay(photos, size, top, left);
         // res.redirect('/home')
-        setTimeout(function () {
-            console.log('l a folosit')
-        }, 3000);
+        await delay(3000);
 
         res.render('send')
     } catch (e) {
@@ -96,6 +94,10 @@ app.post('/', async (req, res) => {
 
     }
 })
+
+function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
 
 app.get('/cacat', (req, res) => {
     res.render('send')
