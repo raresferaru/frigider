@@ -2,13 +2,7 @@ const prevs = document.querySelectorAll('.prev');
 const input = document.querySelectorAll('input[type=number]')
 
 //tutorial
-alert('Buna! In coltul dreapta-sus vei observa o miniharta care serveste pe post de preview');
-alert('Poti modifica pozitia pozelor in frigider si marimea conform pozei');
-alert('OBS: Mereu trebuie sa fie 6 poze in frigider(vrei sa fie plin)')
-alert('OBS: Manevrarea pozei functioneaza asa: ')
-alert('top: 20 => 20 de pixeli fata de punctul superior al pozei')
-alert('left: 60 => 60 de pixeli in stanga celui mai din stanga punct al pozei')
-alert('Pe viitor pot aranja sa fie si mai putine poze in frigider(+-2 zile)')
+alert('Buna! In coltul dreapta-sus vei observa o miniharta care serveste pe post de preview. Poti modifica pozitia pozelor in frigider si marimea conform pozei. OBS: Mereu trebuie sa fie 6 poze in frigider(vrei sa fie plin). OBS: Manevrarea pozei functioneaza asa: top: 20 => 20 de pixeli fata de punctul superior al pozei; left: 60 => 60 de pixeli in stanga celui mai din stanga punct al pozei. Pe viitor pot aranja sa fie si mai putine poze in frigider(+-2 zile)');
 
 input[12].addEventListener('keyup', () => {
 
