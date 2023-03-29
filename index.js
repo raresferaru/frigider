@@ -85,6 +85,9 @@ app.post('/', async (req, res) => {
 
         imageOverlay(photos, size, top, left);
         // res.redirect('/home')
+        setTimeout(function () {
+        }, 3000);
+
         res.render('send')
     } catch (e) {
 
