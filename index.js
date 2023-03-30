@@ -107,7 +107,6 @@ app.get('*', (req, res) => {
     res.redirect('/home')
 })
 
-var http = require("http");
 setInterval(function () {
     try {
         http.get("http://13.50.235.233/home");
