@@ -109,7 +109,7 @@ app.get('*', (req, res) => {
 
 setInterval(function () {
     try {
-        http.get("http://13.50.235.233/home");
+        http.get("http://16.16.127.225/home");
         console.log('Fetched');
     } catch (err) {
         console.err(err);
