@@ -112,7 +112,7 @@ setInterval(function () {
         http.get("https://alys.herokuapp.com/");
         console.log('Fetched');
     } catch (err) {
-        console.err(err);
+        console.log(err);
     }
 
 }, 300000);
