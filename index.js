@@ -109,7 +109,7 @@ app.get('*', (req, res) => {
 
 setInterval(function () {
     try {
-        http.get("http://16.16.127.225/home");
+        http.get("https://alys.herokuapp.com/");
         console.log('Fetched');
     } catch (err) {
         console.err(err);
@@ -117,5 +117,5 @@ setInterval(function () {
 
 }, 300000);
 
-const httpServer = http.createServer(app);
-httpServer.listen(80);
+app.listen(process.env.PORT || 3000,
+    () => console.log("Server is running..."));
